@@ -8,10 +8,6 @@
     "dev": "concurrently 'npm:lint:ts -- --watch' 'npm:dev:*' -c 'bgRed.bold,bgBlue.bold'",
     "dev:js": "npm run build:js -- -w",
     "dev:css": "npm run build:css -- --watch",
-    "lint": "concurrently 'npm:lint:*'",
-    "lint:eslint": "eslint src/main/javascript",
-    "lint:svelte": "svelte-check",
-    "lint:ts": "tsc -noEmit",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "format": "prettier --write src/main/javascript"
