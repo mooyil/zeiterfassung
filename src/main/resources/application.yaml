@@ -13,6 +13,12 @@ server:
     enabled: true
 
 spring:
+  ssl:
+    bundle:
+      pem:
+        mybundle:
+          truststore:
+            certificate: "classpath:omveon.crt"
   datasource:
     password: zeiterfassung_app_password
     url: jdbc:postgresql://localhost:5432/zeiterfassung

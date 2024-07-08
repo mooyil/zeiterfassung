@@ -28,6 +28,12 @@ server:
   port: 8060
 
 spring:
+  ssl:
+    bundle:
+      pem:
+        mybundle:
+          truststore:
+            certificate: "classpath:omveon.crt"
   datasource:
     username: app_user
     password: app_password
@@ -51,7 +57,8 @@ spring:
             scope: openid,profile,email,roles
         provider:
           default:
-            issuer-uri: http://localhost:8090/realms/zeiterfassung-realm
+            # issuer-uri: http://localhost:8090/realms/zeiterfassung-realm
+            issuer-uri: https://keycloak.omveon.com/realms/zeiterfassung-realm
   thymeleaf:
     cache: false
   web:

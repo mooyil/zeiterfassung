@@ -44,6 +44,12 @@ server:
   port: 8060
 
 spring:
+  ssl:
+    bundle:
+      pem:
+        mybundle:
+          truststore:
+            certificate: "classpath:omveon.crt"
   datasource:
     username: app_user
     password: app_password
